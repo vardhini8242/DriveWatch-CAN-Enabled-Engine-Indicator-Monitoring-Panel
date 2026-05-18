@@ -154,20 +154,20 @@ Indicator: ON
 
 
 ### 🛠️ Implementation Steps
-Test LCD display
-Test ADC with variable voltage
-Implement fuel reading
-Implement temperature sensor
-Test interrupts
-Test CAN communication
-Integrate all modules
+- Test LCD display
+- Test ADC with variable voltage
+- Implement fuel reading
+- Implement temperature sensor
+- Test interrupts
+- Test CAN communication
+- Integrate all modules
 
 ### 🐞 Debugging Notes
-Issue	Solution
-LCD not working	Check wiring & initialization
-CAN failure	Verify MCP2551 & baud rate
-Temperature error	Check DS18B20 pull-up resistor
-Wrong fuel value	Calibrate ADC
+- Issue	Solution
+- LCD not working	Check wiring & initialization
+- CAN failure	Verify MCP2551 & baud rate
+- Temperature error	Check DS18B20 pull-up resistor
+- Wrong fuel value	Calibrate ADC
 ### 📁 Project Structure
 drivewatch/
 ├── main_node.c
@@ -179,14 +179,14 @@ drivewatch/
 ├── ds18b20.c
 └── README.md
 ### 🔮 Future Roadmap
-OLED display upgrade
-CAN data logging (SD card)
-Bluetooth/Wi-Fi monitoring
-Mobile app integration
-OBD-II compatibility
-Predictive maintenance analytics
+-OLED display upgrade
+-CAN data logging (SD card)
+-Bluetooth/Wi-Fi monitoring
+-Mobile app integration
+-OBD-II compatibility
+-Predictive maintenance analytics
 
 ### 👨‍💻 Author
 ### Harsha Vardhini Dara
-🎓 BTech,Lakireddy Balireddy College of Engineering
-💡 Embedded Systems | CAN | IoT
+-🎓 BTech,Lakireddy Balireddy College of Engineering
+-💡 Embedded Systems | CAN | IoT
