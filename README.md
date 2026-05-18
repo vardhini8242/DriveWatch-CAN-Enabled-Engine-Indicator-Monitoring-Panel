@@ -1,19 +1,81 @@
-# DriveWatch-CAN-Enabled-Engine-Indicator-Monitoring-Panel
-Real-time CAN-based vehicle monitoring system using LPC2129 that decodes engine temperature, fuel level, and indicator signals, and displays them on an LCD dashboard using a multi-node embedded architecture.
+# 🚗 DriveWatch: CAN-Enabled Engine & Indicator Monitoring Panel
 
+![Platform](https://img.shields.io/badge/Platform-Embedded%20Systems-blue)
+![Language](https://img.shields.io/badge/Language-Embedded%20C-green)
+![Protocol](https://img.shields.io/badge/Protocol-CAN-orange)
+![Microcontroller](https://img.shields.io/badge/MCU-LPC2129-red)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
+Real-time vehicle monitoring system built using **CAN protocol**, capable of decoding engine parameters and displaying them on an LCD dashboard — fully embedded, no cloud dependency.
 
-## Table of Contents
-Overview
-Hardware
-Firmware Architecture
-CAN Communication Flow
-Sensor Processing
-Indicator Control Logic
-LCD Display System
-Node Architecture
-Getting Started
-Implementation Steps
-Debugging Notes
-Project Structure
-Future Roadmap
+---
+
+## 📑 Table of Contents
+- [Overview](#-overview)
+- [Hardware](#-hardware)
+- [Architecture](#-firmware-architecture)
+- [CAN Communication](#-can-communication-flow)
+- [Sensor Processing](#-sensor-processing)
+- [Indicator Logic](#-indicator-control-logic)
+- [LCD Display](#-lcd-display-system)
+- [Node Architecture](#-node-architecture)
+- [Getting Started](#-getting-started)
+- [Implementation](#-implementation-steps)
+- [Debugging](#-debugging-notes)
+- [Project Structure](#-project-structure)
+- [Future Scope](#-future-roadmap)
+
+---
+
+## 🔍 Overview
+
+DriveWatch is an embedded automotive monitoring system designed to interface directly with a vehicle’s **CAN (Controller Area Network) bus**.
+
+It decodes real-time vehicle data such as:
+- 🌡️ Engine temperature  
+- ⛽ Fuel level  
+- 🚨 Warning indicators  
+
+and displays them on an LCD dashboard for the driver.
+
+### ✨ Key Features
+- CAN-based real-time communication  
+- Multi-node embedded architecture  
+- LCD dashboard display  
+- DS18B20 temperature sensing  
+- ADC-based fuel monitoring  
+- Interrupt-driven indicator alerts  
+- Fully standalone system (no OS, no cloud)
+
+---
+
+## ⚙️ Hardware
+
+| Component | Description |
+|----------|------------|
+| LPC2129 | Main microcontroller |
+| MCP2551 | CAN transceiver |
+| LCD | Display output |
+| DS18B20 | Temperature sensor |
+| Fuel Gauge | Analog input |
+| LEDs | Indicator output |
+| Switches | Interrupt triggers |
+| USB-UART | Programming interface |
+
+---
+
+## 🧠 Firmware Architecture
+
+The system follows a **modular multi-node architecture**.
+
+### Main Loop (Main Node)
+
+```c
+loop()
+{
+    read_temperature();
+    read_interrupts();
+    receive_fuel_data();
+    update_LCD();
+    send_indicator_status();
+}
