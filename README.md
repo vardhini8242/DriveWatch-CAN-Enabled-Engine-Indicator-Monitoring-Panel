@@ -66,7 +66,7 @@ The system follows a **modular multi-node architecture**.
 
 ### Main Loop (Main Node)
 
-```c
+
 loop()
 {
     read_temperature();
@@ -76,7 +76,7 @@ loop()
     send_indicator_status();
 }
 
-## 🔄 CAN Communication
+### 🔄 CAN Communication
 [FUEL NODE] -----> (Fuel %) -----> [MAIN NODE]
 [MAIN NODE] -----> (Indicator Signals) -----> [INDICATOR NODE]
 
