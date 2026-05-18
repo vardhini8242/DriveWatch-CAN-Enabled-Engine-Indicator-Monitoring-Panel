@@ -1,10 +1,6 @@
 # 🚗 DriveWatch: CAN-Enabled Engine & Indicator Monitoring Panel
 
-![Platform](https://img.shields.io/badge/Platform-Embedded%20Systems-blue)
-![Language](https://img.shields.io/badge/Language-Embedded%20C-green)
-![Protocol](https://img.shields.io/badge/Protocol-CAN-orange)
-![Microcontroller](https://img.shields.io/badge/MCU-LPC2129-red)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
 
 Real-time vehicle monitoring system built using **CAN protocol**, capable of decoding engine parameters and displaying them on an LCD dashboard — fully embedded, no cloud dependency.
 
