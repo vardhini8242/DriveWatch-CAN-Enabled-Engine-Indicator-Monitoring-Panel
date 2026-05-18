@@ -75,3 +75,95 @@ loop()
     update_LCD();
     send_indicator_status();
 }
+
+## 🔄 CAN Communication
+[FUEL NODE] -----> (Fuel %) -----> [MAIN NODE]
+[MAIN NODE] -----> (Indicator Signals) -----> [INDICATOR NODE]
+
+
+- CAN frames enable communication between nodes  
+- Main node acts as **coordinator**  
+- Continuous real-time data exchange  
+
+---
+## 🌡️ Sensor Processing
+
+### 🔹 Temperature (DS18B20)
+- Digital sensor (1-Wire protocol)  
+- Periodic sampling  
+- Displayed on LCD  
+
+### 🔹 Fuel Level (ADC)
+- Analog input via fuel gauge  
+- Converted to percentage  
+- Sent via CAN  
+
+---
+
+## 🚨 Indicator Control Logic
+
+- Triggered using **external interrupts (EINT0 / EINT1)**  
+- Main node processes event  
+- Sends CAN message  
+- Indicator node activates LEDs  
+
+
+Interrupt → Main Node → CAN → Indicator Node → LED
+
+
+---
+
+## 📺 LCD Display System
+
+Displays real-time vehicle parameters:
+
+
+Temp: 85°C
+Fuel: 60%
+Indicator: ON
+
+
+---
+
+## 🧩 Node Architecture
+
+### 🔹 Main Node
+- Reads temperature  
+- Receives fuel data  
+- Handles interrupts  
+- Updates LCD  
+- Sends indicator signals  
+
+### 🔹 Fuel Node
+- Reads fuel using ADC  
+- Sends data via CAN  
+
+### 🔹 Indicator Node
+- Receives CAN messages  
+- Controls LEDs  
+
+---
+
+## 🚀 Getting Started
+
+### 🛠️ Requirements
+- Keil uVision  
+- Flash Magic  
+- LPC2129 Development Board  
+- Embedded C Knowledge  
+
+### ▶️ Steps
+```bash
+git clone https://github.com/your-username/drivewatch.git
+Open project in Keil
+Compile code
+Flash using Flash Magic
+Observe output on LCD
+🛠️ Implementation Steps
+Test LCD display
+Test ADC with variable voltage
+Implement fuel reading
+Implement temperature sensor
+Test interrupts
+Test CAN communication
+Integrate all modules
