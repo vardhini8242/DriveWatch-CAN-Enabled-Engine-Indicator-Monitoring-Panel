@@ -152,14 +152,8 @@ Indicator: ON
 - LPC2129 Development Board  
 - Embedded C Knowledge  
 
-### ▶️ Steps
-```bash
-git clone https://github.com/your-username/drivewatch.git
-Open project in Keil
-Compile code
-Flash using Flash Magic
-Observe output on LCD
-🛠️ Implementation Steps
+
+### 🛠️ Implementation Steps
 Test LCD display
 Test ADC with variable voltage
 Implement fuel reading
@@ -167,3 +161,32 @@ Implement temperature sensor
 Test interrupts
 Test CAN communication
 Integrate all modules
+
+### 🐞 Debugging Notes
+Issue	Solution
+LCD not working	Check wiring & initialization
+CAN failure	Verify MCP2551 & baud rate
+Temperature error	Check DS18B20 pull-up resistor
+Wrong fuel value	Calibrate ADC
+### 📁 Project Structure
+drivewatch/
+├── main_node.c
+├── fuel_node.c
+├── indicator_node.c
+├── lcd_driver.c
+├── can_driver.c
+├── adc_driver.c
+├── ds18b20.c
+└── README.md
+### 🔮 Future Roadmap
+OLED display upgrade
+CAN data logging (SD card)
+Bluetooth/Wi-Fi monitoring
+Mobile app integration
+OBD-II compatibility
+Predictive maintenance analytics
+
+### 👨‍💻 Author
+### Harsha Vardhini Dara
+🎓 BTech,Lakireddy Balireddy College of Engineering
+💡 Embedded Systems | CAN | IoT
